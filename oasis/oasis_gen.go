@@ -1,10 +1,6 @@
 package oasis
 
 import (
-	"github.com/ethereum/go-ethereum/bind"
-)
-
-import (
 	"math/big"
 	"strings"
 
@@ -30,7 +26,9 @@ var (
 
 // Oasis is a wrapper around BoundContract, enforcing type checking and including
 // QoL helper methods
-type Oasis bind.BoundContract
+type Oasis struct {
+	bind.BoundContract
+}
 
 // NewOasis creates a new instance of Oasis, bound to a specific deployed contract.
 func NewOasis(address common.Address, backend bind.ContractBackend) (*Oasis, error) {
@@ -39,7 +37,7 @@ func NewOasis(address common.Address, backend bind.ContractBackend) (*Oasis, err
 		return nil, err
 	}
 	contract := bind.NewBoundContract(address, a, backend, backend, backend)
-	return &Oasis(*contract), nil
+	return &Oasis{*contract}, nil
 }
 
 //////////////////////////////////////////////////////
@@ -56,7 +54,7 @@ func DeployOasis(auth *bind.TransactOpts, backend bind.ContractBackend, close_ti
 	if err != nil {
 		return common.Address{}, nil, nil, err
 	}
-	return address, tx, &Oasis(*contract), nil
+	return address, tx, &Oasis{*contract}, nil
 }
 
 //////////////////////////////////////////////////////

@@ -1,8 +1,34 @@
 package dai
 
+import (
+	"math/big"
+	"strings"
+
+	ethereum "github.com/ethereum/go-ethereum"
+	"github.com/ethereum/go-ethereum/accounts/abi"
+	"github.com/ethereum/go-ethereum/accounts/abi/bind"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/ethereum/go-ethereum/event"
+)
+
+// Reference imports to suppress errors if they are not otherwise used.
+var (
+	_ = big.NewInt
+	_ = strings.NewReader
+	_ = ethereum.NotFound
+	_ = abi.U256
+	_ = bind.Bind
+	_ = common.Big1
+	_ = types.BloomLookup
+	_ = event.NewSubscription
+)
+
 // Dai is a wrapper around BoundContract, enforcing type checking and including
 // QoL helper methods
-type Dai bind.BoundContract
+type Dai struct {
+	bind.BoundContract
+}
 
 // NewDai creates a new instance of Dai, bound to a specific deployed contract.
 func NewDai(address common.Address, backend bind.ContractBackend) (*Dai, error) {
@@ -11,7 +37,7 @@ func NewDai(address common.Address, backend bind.ContractBackend) (*Dai, error) 
 		return nil, err
 	}
 	contract := bind.NewBoundContract(address, a, backend, backend, backend)
-	return &Dai(*contract), nil
+	return &Dai{*contract}, nil
 }
 
 //////////////////////////////////////////////////////
@@ -28,7 +54,7 @@ func DeployDai(auth *bind.TransactOpts, backend bind.ContractBackend, chainId_ *
 	if err != nil {
 		return common.Address{}, nil, nil, err
 	}
-	return address, tx, &Dai(*contract), nil
+	return address, tx, &Dai{*contract}, nil
 }
 
 //////////////////////////////////////////////////////
@@ -235,6 +261,7 @@ func (_Dai *Dai) TransferFrom(opts *bind.TransactOpts, src common.Address, dst c
 ////////////////////////////////////////////////////
 
 //////// Approval ////////
+
 // ApprovalID is the hex of the Topic Hash
 const DaiApprovalID = "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
 
@@ -257,6 +284,7 @@ func (_Dai *Dai) UnpackApprovalLog(log types.Log) (*ApprovalLog, error) {
 }
 
 //////// Transfer ////////
+
 // TransferID is the hex of the Topic Hash
 const DaiTransferID = "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
 
