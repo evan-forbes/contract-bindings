@@ -674,15 +674,15 @@ const OasisLogMakeID = "0x773ff502687307abfa024ac9f62f9752a0d210dac2ffd9a29e38e1
 
 // LogMakeLog represents a LogMake event raised by the Oasis contract.
 type LogMakeLog struct {
-	Id        [32]byte
-	Pair      [32]byte
-	Maker     common.Address
-	PayGem    common.Address
-	BuyGem    common.Address
-	PayAmt    *big.Int
-	BuyAmt    *big.Int
-	Timestamp uint64
-	Raw       types.Log // Blockchain specific contextual infos
+	Id        [32]byte       `abi:"id"`
+	Pair      [32]byte       `abi:"pair"`
+	Maker     common.Address `abi:"maker"`
+	PayGem    common.Address `abi:"pay_gem"`
+	BuyGem    common.Address `abi:"buy_gem"`
+	PayAmt    *big.Int       `abi:"pay_amt"`
+	BuyAmt    *big.Int       `abi:"buy_amt"`
+	Timestamp uint64         `abi:"timestamp"`
+	Raw       types.Log      // Blockchain specific contextual infos
 }
 
 // UnpackLogMakeLog is a log parse operation binding the contract event 0x773ff502687307abfa024ac9f62f9752a0d210dac2ffd9a29e38e12e2ea82c82
