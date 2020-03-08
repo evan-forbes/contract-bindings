@@ -535,7 +535,7 @@ func (_Oasis *Oasis) Take(opts *bind.TransactOpts, id [32]byte, maxTakeAmount *b
 //////// LogBump ////////
 
 // LogBumpID is the hex of the Topic Hash
-const OasisLogBumpID = "0x70a14c213064359ede031fd2a1645a11ce2ec825ffe6ab5cfb5b160c3ef4d0a2"
+const LogBumpID = "0x70a14c213064359ede031fd2a1645a11ce2ec825ffe6ab5cfb5b160c3ef4d0a2"
 
 // LogBumpLog represents a LogBump event raised by the Oasis contract.
 type LogBumpLog struct {
@@ -563,7 +563,7 @@ func (_Oasis *Oasis) UnpackLogBumpLog(log types.Log) (*LogBumpLog, error) {
 //////// LogBuyEnabled ////////
 
 // LogBuyEnabledID is the hex of the Topic Hash
-const OasisLogBuyEnabledID = "0x7089e4f0bcc948f9f723a361590c32d9c2284da7ab1981b1249ad2edb9f953c1"
+const LogBuyEnabledID = "0x7089e4f0bcc948f9f723a361590c32d9c2284da7ab1981b1249ad2edb9f953c1"
 
 // LogBuyEnabledLog represents a LogBuyEnabled event raised by the Oasis contract.
 type LogBuyEnabledLog struct {
@@ -584,7 +584,7 @@ func (_Oasis *Oasis) UnpackLogBuyEnabledLog(log types.Log) (*LogBuyEnabledLog, e
 //////// LogDelete ////////
 
 // LogDeleteID is the hex of the Topic Hash
-const OasisLogDeleteID = "0xcb9d6176c6aac6478ebb9a2754cdce22a944de29ed1f2642f8613884eba4b40c"
+const LogDeleteID = "0xcb9d6176c6aac6478ebb9a2754cdce22a944de29ed1f2642f8613884eba4b40c"
 
 // LogDeleteLog represents a LogDelete event raised by the Oasis contract.
 type LogDeleteLog struct {
@@ -606,7 +606,7 @@ func (_Oasis *Oasis) UnpackLogDeleteLog(log types.Log) (*LogDeleteLog, error) {
 //////// LogInsert ////////
 
 // LogInsertID is the hex of the Topic Hash
-const OasisLogInsertID = "0x6d5c16212bdea16850dce4d9fa2314c446bd30ce84700d9c36c7677c6d283940"
+const LogInsertID = "0x6d5c16212bdea16850dce4d9fa2314c446bd30ce84700d9c36c7677c6d283940"
 
 // LogInsertLog represents a LogInsert event raised by the Oasis contract.
 type LogInsertLog struct {
@@ -628,7 +628,7 @@ func (_Oasis *Oasis) UnpackLogInsertLog(log types.Log) (*LogInsertLog, error) {
 //////// LogItemUpdate ////////
 
 // LogItemUpdateID is the hex of the Topic Hash
-const OasisLogItemUpdateID = "0xa2c251311b1a7a475913900a2a73dc9789a21b04bc737e050bbc506dd4eb3488"
+const LogItemUpdateID = "0xa2c251311b1a7a475913900a2a73dc9789a21b04bc737e050bbc506dd4eb3488"
 
 // LogItemUpdateLog represents a LogItemUpdate event raised by the Oasis contract.
 type LogItemUpdateLog struct {
@@ -649,7 +649,7 @@ func (_Oasis *Oasis) UnpackLogItemUpdateLog(log types.Log) (*LogItemUpdateLog, e
 //////// LogKill ////////
 
 // LogKillID is the hex of the Topic Hash
-const OasisLogKillID = "0x9577941d28fff863bfbee4694a6a4a56fb09e169619189d2eaa750b5b4819995"
+const LogKillID = "0x9577941d28fff863bfbee4694a6a4a56fb09e169619189d2eaa750b5b4819995"
 
 // LogKillLog represents a LogKill event raised by the Oasis contract.
 type LogKillLog struct {
@@ -677,7 +677,7 @@ func (_Oasis *Oasis) UnpackLogKillLog(log types.Log) (*LogKillLog, error) {
 //////// LogMake ////////
 
 // LogMakeID is the hex of the Topic Hash
-const OasisLogMakeID = "0x773ff502687307abfa024ac9f62f9752a0d210dac2ffd9a29e38e12e2ea82c82"
+const LogMakeID = "0x773ff502687307abfa024ac9f62f9752a0d210dac2ffd9a29e38e12e2ea82c82"
 
 // LogMakeLog represents a LogMake event raised by the Oasis contract.
 type LogMakeLog struct {
@@ -705,7 +705,7 @@ func (_Oasis *Oasis) UnpackLogMakeLog(log types.Log) (*LogMakeLog, error) {
 //////// LogMatchingEnabled ////////
 
 // LogMatchingEnabledID is the hex of the Topic Hash
-const OasisLogMatchingEnabledID = "0xea11e00ec1642be9b494019b756440e2c57dbe9e59242c4f9c64ce33fb4f41d9"
+const LogMatchingEnabledID = "0xea11e00ec1642be9b494019b756440e2c57dbe9e59242c4f9c64ce33fb4f41d9"
 
 // LogMatchingEnabledLog represents a LogMatchingEnabled event raised by the Oasis contract.
 type LogMatchingEnabledLog struct {
@@ -726,7 +726,7 @@ func (_Oasis *Oasis) UnpackLogMatchingEnabledLog(log types.Log) (*LogMatchingEna
 //////// LogMinSell ////////
 
 // LogMinSellID is the hex of the Topic Hash
-const OasisLogMinSellID = "0xc28d56449b0bb31e64ee7487e061f57a2e72aea8019d810832f26dda099823d0"
+const LogMinSellID = "0xc28d56449b0bb31e64ee7487e061f57a2e72aea8019d810832f26dda099823d0"
 
 // LogMinSellLog represents a LogMinSell event raised by the Oasis contract.
 type LogMinSellLog struct {
@@ -748,7 +748,7 @@ func (_Oasis *Oasis) UnpackLogMinSellLog(log types.Log) (*LogMinSellLog, error) 
 //////// LogSetAuthority ////////
 
 // LogSetAuthorityID is the hex of the Topic Hash
-const OasisLogSetAuthorityID = "0x1abebea81bfa2637f28358c371278fb15ede7ea8dd28d2e03b112ff6d936ada4"
+const LogSetAuthorityID = "0x1abebea81bfa2637f28358c371278fb15ede7ea8dd28d2e03b112ff6d936ada4"
 
 // LogSetAuthorityLog represents a LogSetAuthority event raised by the Oasis contract.
 type LogSetAuthorityLog struct {
@@ -769,7 +769,7 @@ func (_Oasis *Oasis) UnpackLogSetAuthorityLog(log types.Log) (*LogSetAuthorityLo
 //////// LogSetOwner ////////
 
 // LogSetOwnerID is the hex of the Topic Hash
-const OasisLogSetOwnerID = "0xce241d7ca1f669fee44b6fc00b8eba2df3bb514eed0f6f668f8f89096e81ed94"
+const LogSetOwnerID = "0xce241d7ca1f669fee44b6fc00b8eba2df3bb514eed0f6f668f8f89096e81ed94"
 
 // LogSetOwnerLog represents a LogSetOwner event raised by the Oasis contract.
 type LogSetOwnerLog struct {
@@ -790,7 +790,7 @@ func (_Oasis *Oasis) UnpackLogSetOwnerLog(log types.Log) (*LogSetOwnerLog, error
 //////// LogSortedOffer ////////
 
 // LogSortedOfferID is the hex of the Topic Hash
-const OasisLogSortedOfferID = "0x20fb9bad86c18f7e22e8065258790d9416a7d2df8ff05f80f82c46d38b925acd"
+const LogSortedOfferID = "0x20fb9bad86c18f7e22e8065258790d9416a7d2df8ff05f80f82c46d38b925acd"
 
 // LogSortedOfferLog represents a LogSortedOffer event raised by the Oasis contract.
 type LogSortedOfferLog struct {
@@ -811,7 +811,7 @@ func (_Oasis *Oasis) UnpackLogSortedOfferLog(log types.Log) (*LogSortedOfferLog,
 //////// LogTake ////////
 
 // LogTakeID is the hex of the Topic Hash
-const OasisLogTakeID = "0x3383e3357c77fd2e3a4b30deea81179bc70a795d053d14d5b7f2f01d0fd4596f"
+const LogTakeID = "0x3383e3357c77fd2e3a4b30deea81179bc70a795d053d14d5b7f2f01d0fd4596f"
 
 // LogTakeLog represents a LogTake event raised by the Oasis contract.
 type LogTakeLog struct {
@@ -840,7 +840,7 @@ func (_Oasis *Oasis) UnpackLogTakeLog(log types.Log) (*LogTakeLog, error) {
 //////// LogTrade ////////
 
 // LogTradeID is the hex of the Topic Hash
-const OasisLogTradeID = "0x819e390338feffe95e2de57172d6faf337853dfd15c7a09a32d76f7fd2443875"
+const LogTradeID = "0x819e390338feffe95e2de57172d6faf337853dfd15c7a09a32d76f7fd2443875"
 
 // LogTradeLog represents a LogTrade event raised by the Oasis contract.
 type LogTradeLog struct {
@@ -864,7 +864,7 @@ func (_Oasis *Oasis) UnpackLogTradeLog(log types.Log) (*LogTradeLog, error) {
 //////// LogUnsortedOffer ////////
 
 // LogUnsortedOfferID is the hex of the Topic Hash
-const OasisLogUnsortedOfferID = "0x8173832a493e0a3989e521458e55bfe9feac9f9b675a94e100b9d5a85f814862"
+const LogUnsortedOfferID = "0x8173832a493e0a3989e521458e55bfe9feac9f9b675a94e100b9d5a85f814862"
 
 // LogUnsortedOfferLog represents a LogUnsortedOffer event raised by the Oasis contract.
 type LogUnsortedOfferLog struct {
